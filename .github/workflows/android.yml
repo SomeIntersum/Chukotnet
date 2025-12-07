@@ -3,7 +3,7 @@ name: Android Build & Release
 on:
   push:
     tags:
-      - 'v*'
+      - '*' # Срабатывать на ЛЮБОЙ тег (v1, 1.0, release-2 и т.д.)
 
 jobs:
   build:
