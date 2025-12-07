@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ChukotnetApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Основные цвета бренда -->
+        <item name="colorPrimary">@color/orange_primary</item>
+        <item name="colorPrimaryVariant">@color/orange_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Цвет акцентов (галочки, курсоры) -->
+        <item name="colorSecondary">@color/blue_accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Цвет статус-бара (верхняя полоска телефона) -->
+        <item name="android:statusBarColor">@color/orange_dark</item>
+
+        <!-- Фон приложения -->
+        <item name="android:windowBackground">@color/background_light</item>
+    </style>
+</resources>

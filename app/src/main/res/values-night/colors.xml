@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Оранжевый чуть темнее для глаз -->
+    <color name="orange_primary">#FFB74D</color>
+    <color name="orange_dark">#F57C00</color>
+    <color name="orange_light">#3E2723</color> <!-- Темно-коричневый фон для карточек -->
+
+    <color name="blue_accent">#64B5F6</color>
+
+    <!-- Текст белый -->
+    <color name="text_primary">#EEEEEE</color>
+    <color name="text_secondary">#B0BEC5</color>
+
+    <!-- Фон темный -->
+    <color name="background_light">#121212</color> <!-- Почти черный фон экрана -->
+    <color name="surface_white">#2C2C2C</color> <!-- Темно-серый фон полей ввода -->
+
+    <!-- Инверсия стандартных цветов -->
+    <color name="black">#FFFFFF</color>
+    <color name="white">#000000</color>
+
+    <color name="purple_500">#FFBB86FC</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    </resources>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light">
+
+    <!-- 1. ГЛАВНАЯ ВКЛАДКА (КАБИНЕТ) -->
+    <ScrollView
+        android:id="@+id/layoutHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        android:clipToPadding="false"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Логотип -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Chukotnet"
+                android:textColor="@color/orange_primary"
+                android:textSize="34sp"
+                android:textStyle="bold"/>
+
+            <!-- КАРТОЧКА ВХОДА -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvResult"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Авторизация"
+                        android:textSize="22sp"
+                        android:lineSpacingExtra="8dp"
+                        android:textColor="@color/text_primary"
+                        android:gravity="center"
+                        android:layout_marginBottom="20dp"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        android:layout_marginBottom="10dp"/>
+
+                    <EditText
+                        android:id="@+id/etLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Логин"
+                        android:layout_marginBottom="10dp"/>
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Пароль"
+                        android:inputType="textPassword"
+                        android:layout_marginBottom="10dp"/>
+
+                    <CheckBox
+                        android:id="@+id/cbRemember"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Запомнить меня"/>
+
+                    <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:text="Войти"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/orange_primary"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- КАРТОЧКА ОПЛАТЫ -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пополнение счета"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="12dp"
+                android:layout_marginStart="4dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <EditText
+                        android:id="@+id/etPayAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Лицевой счет / Договор"
+                        android:inputType="number"
+                        android:layout_marginBottom="10dp"/>
+
+                    <EditText
+                        android:id="@+id/etPayAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Сумма (руб)"
+                        android:inputType="numberDecimal"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TextView
+                        android:id="@+id/tvPayOwnerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/blue_accent"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:layout_marginBottom="10dp"/>
+
+                    <Button
+                        android:id="@+id/btnCheckPayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:text="Проверить"
+                        android:backgroundTint="@color/blue_accent"/>
+
+                    <Button
+                        android:id="@+id/btnGoToBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:text="Оплатить картой"
+                        android:visibility="gone"
+                        android:backgroundTint="#4CAF50"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 2. ВКЛАДКА НОВОСТИ -->
+    <LinearLayout
+        android:id="@+id/layoutNews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottomNav"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"/>
+
+        <WebView
+            android:id="@+id/webViewNews"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!-- 3. ВКЛАДКА ТАРИФЫ -->
+    <LinearLayout
+        android:id="@+id/layoutTariffs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottomNav"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressTariffs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:visibility="gone"/>
+
+        <WebView
+            android:id="@+id/webViewTariffs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!-- 4. ВКЛАДКА СТАТИСТИКА -->
+    <LinearLayout
+        android:id="@+id/layoutStats"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottomNav"
+        android:visibility="gone"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отчеты и статистика"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerReportType"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnRefreshStats"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="Загрузить отчет"
+            android:backgroundTint="#6200EE"
+            android:layout_marginBottom="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressStats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <WebView
+            android:id="@+id/webViewStats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+    <!-- WEBVIEW ОПЛАТЫ (Всплывающее) -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:elevation="10dp"
+        android:background="@color/surface_white"/>
+
+    <!-- КНОПКА НАСТРОЕК -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/btnSettings"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp"
+    android:src="@android:drawable/ic_menu_manage"
+    app:backgroundTint="@color/surface_white"
+    app:tint="@color/orange_primary"
+    app:fabSize="mini"
+    app:elevation="6dp"
+    android:contentDescription="Настройки"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/surface_white"
+        app:menu="@menu/bottom_menu"
+        app:itemIconTint="@color/orange_primary"
+        app:itemTextColor="@color/orange_primary"
+        app:labelVisibilityMode="labeled"
+        app:elevation="8dp"/>
+
+
+</RelativeLayout>

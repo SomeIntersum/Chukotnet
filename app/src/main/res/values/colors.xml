@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Фирменный оранжевый -->
+    <color name="orange_primary">#FF9800</color>
+    <color name="orange_dark">#F57C00</color>
+    <color name="orange_light">#FFE0B2</color>
+
+    <!-- Дополнительные цвета -->
+    <color name="blue_accent">#0277BD</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+
+    <!-- Цвета фона -->
+    <color name="background_light">#FAFAFA</color>
+    <color name="surface_white">#FFFFFF</color>
+
+    <!-- Стандартные -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+</resources>
